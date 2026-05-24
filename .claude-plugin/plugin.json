@@ -1,0 +1,14 @@
+{
+  "name": "ics-calendar",
+  "version": "1.0.0",
+  "description": "Read and write your Mac Calendar (including iCloud) directly from Claude, via Apple's native EventKit framework. No credentials required.",
+  "author": {
+    "name": "Alexey Fedorov",
+    "email": "alexey.max.fedorov@gmail.com",
+    "url": "https://github.com/alexey-max-fedorov"
+  },
+  "homepage": "https://github.com/alexey-max-fedorov/ics-plugin",
+  "repository": "https://github.com/alexey-max-fedorov/ics-plugin",
+  "license": "LicenseRef-ICS-Calendar",
+  "keywords": ["calendar", "ical", "icloud", "eventkit", "macos", "scheduling"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ics-calendar-plugins",
+  "version": "1.0.0",
+  "description": "macOS Calendar (EventKit) integration for Claude Code.",
+  "repository": "https://github.com/alexey-max-fedorov/ics-plugin",
+  "owner": {
+    "name": "Alexey Fedorov",
+    "email": "alexey.max.fedorov@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "ics-calendar",
+      "source": "./",
+      "description": "Read and write your Mac Calendar (including iCloud) directly from Claude, via Apple's native EventKit framework. No credentials required."
+    }
+  ]
+}
