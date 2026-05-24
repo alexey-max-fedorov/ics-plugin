@@ -10,5 +10,12 @@
   "homepage": "https://github.com/alexey-max-fedorov/ics-plugin",
   "repository": "https://github.com/alexey-max-fedorov/ics-plugin",
   "license": "LicenseRef-ICS-Calendar",
-  "keywords": ["calendar", "ical", "icloud", "eventkit", "macos", "scheduling"]
+  "keywords": [
+    "calendar",
+    "ical",
+    "icloud",
+    "eventkit",
+    "macos",
+    "scheduling"
+  ]
 }
