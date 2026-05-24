@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.alexey-max-fedorov.ics-calendar-bridge</string>
+    <key>CFBundleName</key>
+    <string>ICS Calendar Bridge</string>
+    <key>CFBundleDisplayName</key>
+    <string>ICS Calendar Bridge</string>
+    <key>CFBundleVersion</key>
+    <string>1.0.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleExecutable</key>
+    <string>ics-bridge</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>ICS Calendar reads and writes your calendars so Claude can help you schedule, plan, and manage events.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>ICS Calendar reads your calendars so Claude can help you schedule and plan.</string>
+</dict>
+</plist>
