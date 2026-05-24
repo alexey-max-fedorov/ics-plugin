@@ -84,16 +84,18 @@ describe('callBridge', () => {
     }
   ));
 
-  it('errors when ICS_BRIDGE_BIN env var is unset', async () => {
+  it('ignores unexpanded ${...} in ICS_BRIDGE_BIN and self-resolves path', async () => {
     const prev = process.env.ICS_BRIDGE_BIN;
-    delete process.env.ICS_BRIDGE_BIN;
+    process.env.ICS_BRIDGE_BIN = '${CLAUDE_PLUGIN_ROOT}/bin/ICSBridge.app';
     try {
       const out = await callBridge(['list-calendars']);
-      expect(out.status).toBe('error');
-      if (out.status !== 'error') throw new Error('unreachable');
-      expect(out.error_message.toLowerCase()).toMatch(/ics_bridge_bin/);
+      // Must not surface the unexpanded-variable string as an error message
+      if (out.status === 'error') {
+        expect(out.error_message).not.toMatch(/\$\{CLAUDE_PLUGIN_ROOT\}/);
+      }
     } finally {
-      if (prev !== undefined) process.env.ICS_BRIDGE_BIN = prev;
+      if (prev === undefined) delete process.env.ICS_BRIDGE_BIN;
+      else process.env.ICS_BRIDGE_BIN = prev;
     }
   });
 });

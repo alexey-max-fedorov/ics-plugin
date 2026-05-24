@@ -2,6 +2,7 @@ import { spawn } from 'node:child_process';
 import { existsSync, unlinkSync, readFileSync } from 'node:fs';
 import * as os from 'node:os';
 import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { BridgeResult, BridgeErrorCode } from './types.js';
 
 export type BridgeOutcome =
@@ -14,15 +15,16 @@ interface CallOptions {
 
 const DEFAULT_TIMEOUT_MS = 10_000;
 
+function resolveBridgeBin(): string {
+  const env = process.env.ICS_BRIDGE_BIN;
+  if (env && !env.includes('${')) return env;
+  // Fall back to path relative to this compiled file (server/bridge.js → bin/ICSBridge.app)
+  const selfDir = path.dirname(fileURLToPath(import.meta.url));
+  return path.join(selfDir, '..', 'bin', 'ICSBridge.app');
+}
+
 export async function callBridge(args: string[], opts: CallOptions = {}): Promise<BridgeOutcome> {
-  const bin = process.env.ICS_BRIDGE_BIN;
-  if (!bin) {
-    return {
-      status: 'error',
-      error_code: 'internal',
-      error_message: 'ICS_BRIDGE_BIN environment variable is not set.',
-    };
-  }
+  const bin = resolveBridgeBin();
   if (!existsSync(bin)) {
     return {
       status: 'error',
