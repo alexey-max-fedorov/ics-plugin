@@ -1,0 +1,9 @@
+node_modules/
+server/
+bin/
+swift/.build/
+swift/Package.resolved
+.DS_Store
+*.log
+.vscode/
+.idea/
