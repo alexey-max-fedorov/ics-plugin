@@ -7,3 +7,5 @@ swift/Package.resolved
 *.log
 .vscode/
 .idea/
+.claude/
+docs/
