@@ -1,0 +1,30 @@
+{
+  "name": "ics-calendar",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "build:server": "tsc",
+    "build:swift": "cd swift && ./build.sh",
+    "build": "pnpm build:swift && pnpm build:server",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf server/ bin/ swift/.build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3",
+    "vitest": "^1.6.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=11"
+  },
+  "packageManager": "pnpm@11.3.0"
+}
