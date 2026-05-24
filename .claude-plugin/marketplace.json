@@ -1,6 +1,6 @@
 {
   "name": "ics-calendar-plugins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "macOS Calendar (EventKit) integration for Claude Code.",
   "repository": "https://github.com/alexey-max-fedorov/ics-plugin",
   "owner": {
