@@ -22,7 +22,7 @@
     "esbuild": "^0.28.1",
     "tsx": "^4.23.0",
     "typescript": "^6.0.3",
-    "vitest": "^1.6.1"
+    "vitest": "^4.1.10"
   },
   "engines": {
     "node": ">=18",
