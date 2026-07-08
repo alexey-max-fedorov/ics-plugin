@@ -22,7 +22,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Update dependencies (root)
-        run: pnpm update
+        run: pnpm update --latest
 
       - name: Commit and push changes
         run: |
